@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript ile Çoklu metin değiştirme</title>
+</head>
+<body>
+
+  <h1 id="message1"></h1>
+  <h2 id="message2"></h2>
+  <h3 id="message3"></h3>
+  <h4 id="message4"></h4>
+  <h5 id="message5"></h5>
+  <h6 id="message6"></h6>
+
+<!--    input alanı içine yeni bir değer girildiğinde veya varolan değer değiştirildiğinde tetiklenir. -->
+<input type="text" id="inputField" oninput="changeText()" >
+    <p>Yukarıdaki metin kutusuna bir şeyler yazın ve Enter tuşuna basın. Metin kutusuna yazdığınız şeyler, yukarıdaki başlıklara eklenecektir.</p>
+  <script>
+    function changeText() {
+        var inputValue = document.getElementById("inputField").value;
+        document.getElementById("message1").innerText = inputValue;
+        document.getElementById("message2").innerText = inputValue;
+        document.getElementById("message3").innerText = inputValue;
+        document.getElementById("message4").innerText = inputValue;
+        document.getElementById("message5").innerText = inputValue;
+        document.getElementById("message6").innerText = inputValue;
+    }
+    </script>
+
+</body>
+</html>
