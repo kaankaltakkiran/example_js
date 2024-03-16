@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hesap Makinesi</title>
+</head>
+<body>
+  <div>
+    <input type="text" id="display"  readonly style="width: 200px;"><br><br>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="deleteLast()">←</button>
+    <br>
+    <button onclick="appendToDisplay('7')">7</button>
+    <button onclick="appendToDisplay('8')">8</button>
+    <button onclick="appendToDisplay('9')">9</button>
+    <button onclick="appendToDisplay('/')">/</button><br>
+    <button onclick="appendToDisplay('4')">4</button>
+    <button onclick="appendToDisplay('5')">5</button>
+    <button onclick="appendToDisplay('6')">6</button>
+    <button onclick="appendToDisplay('*')">*</button><br>
+    <button onclick="appendToDisplay('1')">1</button>
+    <button onclick="appendToDisplay('2')">2</button>
+    <button onclick="appendToDisplay('3')">3</button>
+    <button onclick="appendToDisplay('-')">-</button><br>
+    <button onclick="appendToDisplay('0')">0</button>
+    <button onclick="appendToDisplay('.')">.</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="appendToDisplay('+')">+</button>
+  </div>
+<!--  const bir kez atandıktan sonra, değeri değiştirilemez
+ let ise değiştirlir. -->
+  <script>
+   /*  hesap makinesiden gelen sayı ve işlemleri tutuyor */
+    let displayValue = '';
+     //İnputboxa değer eklemek için kullanılır.
+    function appendToDisplay(value) {
+      displayValue += value;
+      document.getElementById('display').value = displayValue;
+    }
+    //İnputboxdaki değeri temizler.
+    function clearDisplay() {
+      displayValue = '';
+      document.getElementById('display').value = '';
+    }
+    //İnputboxdaki değeri siler.
+    function deleteLast() {
+      // slice() metodu, bir dizeyi başka bir dizeden kopyalamak için kullanılır.
+      //0 yani ilk elemandan başla ve -1 yani son elemanı almadan al.
+      displayValue = displayValue.slice(0, -1);
+      document.getElementById('display').value = displayValue;
+    }
+
+    function calculate() {
+  try {
+    const result = new Function('return ' + displayValue)();
+    document.getElementById('display').value = result;
+    //değeri stringe çevirir.
+    displayValue = result.toString();
+  } catch (error) {
+    document.getElementById('display').value = 'Hata';
+    displayValue = '';
+  }
+}
+
+  </script>
+</body>
+</html>
