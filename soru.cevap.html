@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soru Cevap Sistemi</title>
+</head>
+<body>
+  <h3>Soru 1: Soru 1 Başlık</h3>
+  <button onclick="cevapGoster(1)">Cevap</button>
+  <p id="cevap1" style="display:none;">Cevap: Bu cevap Soru 1 in cevabı...</p>
+
+  <h3>Soru 2: Soru 2 Başlık</h3>
+  <button onclick="cevapGoster(2)">Cevap</button>
+  <p id="cevap2" style="display:none;">Cevap: Bu cevap Soru 2 in cevabı...</p>
+
+  <h3>Soru 3: Soru 3 Başlık</h3>
+  <button onclick="cevapGoster(3)">Cevap</button>
+  <p id="cevap3" style="display:none;">Cevap: Bu cevap Soru 3 in cevabı...</p>
+
+  <script>
+ /*    gelen soru numarasına göre cevap gösterme fonksiyonu */
+/*  block ile element görünür, none ile görünmez yapılır.  */
+    function cevapGoster(soruNo) {
+      var cevap = document.getElementById("cevap" + soruNo);
+      if (cevap.style.display === "none") {
+        cevap.style.display = "block";
+      } else {
+        cevap.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
