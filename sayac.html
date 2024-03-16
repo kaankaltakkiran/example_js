@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Sayaç Uygulaması</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 100px;
+    }
+    #counter {
+        font-size: 48px;
+    }
+    button {
+        font-size: 24px;
+        padding: 10px 20px;
+        margin: 20px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div id="counter">0</div>
+<!-- Arrtırmak için gerekli buton -->
+<button onclick="arttir()">Arttır</button>
+<!-- Azaltmak için gerekli buton -->
+<button onclick="azalt()">Azalt</button>
+
+<script>
+/*   Başlangıç sayaç değeri 0 */
+    var count = 0;
+
+    function arttir() {
+        count++;
+ /*innerHTML:Elementin içeriğini temsil eden HTML'i döndürür veya belirler. */
+        document.getElementById("counter").innerHTML = count;
+    }
+
+    function azalt() {
+            count--;
+            document.getElementById("counter").innerHTML = count;   
+    }
+</script>
+</body>
+</html>
