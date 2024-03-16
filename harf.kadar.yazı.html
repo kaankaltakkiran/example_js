@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harf Uzunluğu Kadar Yazdırma</title>
+</head>
+<body>
+  <input type="text" id="message"  oninput="yazdir()">
+  <h1 id="result"></h1>
+
+  <script>
+    function yazdir() {
+   /*    input değerini al */
+      var harf = document.getElementById('message').value;
+    /*   inputtaki değerin uzunluğunu al */
+      var uzunluk = harf.length;
+      var sonuc = "";
+
+      for (var i = 0; i < uzunluk; i++) {
+        sonuc += harf + "<br>";
+      }
+
+      document.getElementById('result').innerHTML = sonuc;
+    }
+  </script>
+</body>
+</html>
