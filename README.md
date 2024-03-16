@@ -44,3 +44,12 @@ function test() {
 
 •**innerHTML**: Bir HTML elementinin içeriğini temsil eder. Bu özellik, elementin içeriğini **HTML biçiminde** alır veya ayarlar.
 
+### String bir ifadenin harf uzunluğu nasıl alınır?
+```javascript
+var kelime = "kaan";
+var uzunluk = kelime.length;
+console.log("Kaan ifadesinin harf sayısı: " + uzunluk); //4
+```
+
+
+
