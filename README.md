@@ -51,6 +51,22 @@ var uzunluk = kelime.length;
 console.log("Kaan ifadesinin harf sayısı: " + uzunluk); //4
 ```
 
+### Bir elementin görünürlüğü nasıl değiştirilir?
+Örneğin idsi element olan  h1 etiketinin görünürlüğünü değiştirme.
+```html
+<h1 id="element">
+Örnek Yazı
+</h1>
+```
+Bu şeklide h1 etiketi **görünür** hale gelir.
+```javascript
+document.getElementById("element").style.display = "block";
+```
+Bu şeklide h1 etiketi **görünmez** hale gelir.
+```javascript
+document.getElementById("element").style.display = "none";
+```
+
 
 
 
