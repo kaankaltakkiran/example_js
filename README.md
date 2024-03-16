@@ -14,7 +14,7 @@ function functionName(parameters) {
 
 ```
 ### Html bir elementin değeri nasıl alınır?
-Örneğin h1 elementinin id değeri **textInput** olsun değeri aşşığıdaki gibi alınır.
+Örneğin h1 elementinin id değeri **textInput** olsun değeri Aşağıda bir örnek bulunmaktadır.
 ```javascript
 function test() {
  var elementValue = document.getElementById("textInput").value;
