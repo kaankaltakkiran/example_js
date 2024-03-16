@@ -20,6 +20,8 @@ function test() {
  var elementValue = document.getElementById("textInput").value;
 }
 ```
+### const ile let arasında ne fark var ?
+**const**, bir kez atandıktan sonra, değeri değiştirilemez. **Let** ise değiştirlir.
 
 ### Javascriptte belli başlı eventler
 **Eventler**: Javascript kodlarının-komutlarının HTML ile etkileşime geçmesine olanak sağlamaktadır. 
