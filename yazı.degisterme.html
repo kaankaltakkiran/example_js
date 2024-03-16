@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript ile Değişen Metin</title>
+</head>
+<body>
+
+<h1 id="message">Merhaba</h1>
+<input type="text" id="textInput">
+<!-- onclick: içindeki metni değiştirmek için bir düğmeye tıklandığında bir JavaScript fonksiyonunu çağırır. -->
+<button onclick="degistir()">Yazıyı Değiştir</button>
+
+<script>
+function degistir() {
+    // Input kutusundaki metni al
+    var newMessage = document.getElementById("textInput").value;
+    
+    // H1 etiketindeki metni değiştir
+    document.getElementById("message").innerText = newMessage;
+}
+</script>
+
+</body>
+</html>
