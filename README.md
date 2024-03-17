@@ -83,7 +83,57 @@ Bu şeklide h1 etiketi **görünmez** hale gelir.
 ```javascript
 document.getElementById("element").style.display = "none";
 ```
-
+#### Fetch fonksiyonu ne işe yarar ve then metodu ne işe yarar? fetchten gelen veriler nasıl kullanılır?
+**Fetch**, belirtilen URL'ye bir HTTP GET isteği gönderir. Aşağıda örnek bulunmaktadır.
+```javascript
+fetch('https://dummyjson.com/products/1')
+```
+`then()`, örneğin **fetch** ile gönderilen bir isteğin **başarıyla çözüldüğünde veya reddedildiğinde** çağrılan bir geri çağırma fonksiyonunudur. 
+Aşağıdaki örnekte cevabı çağırıp sonra bu cevabı jsona çeviren örnek  bulunmaktadır.
+```javascript
+.then(res => res.json())
+```
+ Gelen cevabı Json formatına çevirdiğimiz veriyi tekrardan then metodu ile verileri elde edebililiyoruz. Bize bir obje dönüyor. Aşağıda örnek bulunmaktadır. Console.log ile consolda verileri görebiliriz.
+ ```javascript
+ .then(data => console.log(data))
+```
+ Tüm datayı değilde jsondaki örneğin **title** verisi görmek istiyorsanız Aşağıdaki örneği kullanabilirsiniz.
+  ```javascript
+ .then(data => console.log(data.title))
+```
+ Örnek bir fetch kodu
+```javascript
+fetch('https://example.com')
+  .then(response => {
+    // Yanıt alındığında yapılacak işlemler
+    // Örneğin, yanıtı JSON formatına dönüştürme
+    return response.json();
+  })
+  .then(data => {
+    // Dönüştürülen veriyi kullanma
+    console.log(data);
+  })
+  .catch(error => {
+    // Hata durumunda yapılacak işlemler
+    console.error('Bir hata oluştu:', error);
+  });       
+```
+#### Map fonksiyonu ne işe yarar ve nasıl kullanılır?
+`map()`, fonksiyounu çoklu verileri **döngüye sokar** ve bir **diziye çevirir**. Aşağıda örnek bulunmaktadır.
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+// Her bir sayının karesini hesaplayan bir map fonksiyonu
+const squaredNumbers = numbers.map(number => number * number);
+console.log(squaredNumbers); // Çıktı: [1, 4, 9, 16, 25]
+```
+ #### Join ne işe yarar ve nasıl kullanılır?
+`join()`, bir dizideki tüm öğeleri birleştirerek bir dize oluşturur. Bu yöntem, dizi öğelerini birleştirirken belirtilen bir ayırıcıyı kullanır. Aşağıda örnek bulunmaktadır.
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+// const fruits = ["Elma", "Armut", "Muz", "Üzüm"];
+const result = fruits.join("-");
+console.log(result);  // Çıktı: [Elma-Armut-Muz-Üzüm]
+```
 
 
 
