@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch Veri Çekme Örneği</title>
+</head>
+<body>
+  <div id="productList"></div>
+
+  <script>
+    fetch('https://dummyjson.com/products/1')
+      .then(response => response.json())
+      .then(data => {
+        // Alınan Tüm verileri göster
+        console.log('Alınan veri:', data);
+        // Alınan verilerin atandığı div
+        const productListDiv = document.getElementById('productList');
+        
+        // Listelinen verilerin oluşturulduğu HTML
+        const productListHTML = `
+          <h1>Ürün</h2>
+            <table border="1">
+            <tr>
+              <th>ID</th>
+              <th>Başlık</th>
+              <th>Açıklama</th>
+              <th>Fiyat</th>
+              <th>İndirim Yüzdesi</th>
+              <th>Değerlendirme Puanı</th>
+              <th>Stock</th>
+              <th>Marka</th>
+              <th>Kategori</th>
+              <th>Küçük Resim</th>
+            </tr>
+            <tr>
+              <td>${data.id}</td>
+              <td>${data.title}</td>
+              <td>${data.description}</td>
+              <td>${data.price}</td>
+              <td>${data.discountPercentage}</td>
+              <td>${data.rating}</td>
+              <td>${data.stock}</td>
+              <td>${data.brand}</td>
+              <td>${data.category}</td>
+              <td><img src="${data.thumbnail}" style="max-height: 100px;" alt="${data.title}"></td>
+            </tr>
+          </table>
+          <ul>
+            <h3>Diğer Resimler</h3>
+                  ${data.images.map(image => `<li><img src="${image}" style="max-height: 70px;" alt="${data.title}"></li>`).join('')}
+                </ul>
+        `;
+       /*  Map fonksiyounu data.images teki resimleri döngüye sokar ve her bir resmi img tagi içine alır. */
+         /*    burdaki join ise map fonksiyonundan oluşturuduğu dizi de elamanlar virgülle ayrılmıştır. Burdaki join fonksiyonu ile bu virgülleri kaldırır. */
+        
+        // HTML'i ekle
+        productListDiv.innerHTML = productListHTML;
+      })
+      .catch(error => {
+        console.error('Veri çekme sırasında bir hata oluştu:', error);
+      });
+  </script>
+</body>
+</html>
