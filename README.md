@@ -1,19 +1,19 @@
 # Örnek Javascript Uyguamaları
 Bu repoda **javascript** öğrenirken kodladığım basit örnekler bulunmaktadır. Bu örneklerde temel hedef **javascript** olup html ve css kodlarına önem verilmemiştir.
 
-## [Yazı Değiştirme Uygulaması](01.html)
+## [Yazı Değiştirme Uygulaması](01-yazi-degistirme-uygulamasi.html)
 Bu örnekte, javascript ile h1 etiketi içindeki Merhaba yazan yazıyı, inputboxa değiştirmek istediğimiz metni yazdıktan sonra değiştir butonuna basıp **yazının değiştiği** uygulamadır.
-## [Sayaç Uygulaması](02.html)
+## [Sayaç Uygulaması](02-sayac-uygulamasi.html)
 Bu örnekte, bir sayıyı **artırıp azaltmak** için kullanılır. Kullanıcı **Arttır** butonu ile sayıyı birer birer arttırır, **Azalt** butonu ile sayıyı birer birer azaltır.
-## [Hesap Makinesi Uygulaması](03.html)
+## [Hesap Makinesi Uygulaması](03-hesap-makinesi-uygulamasi.html)
 Bu örnekte, **Toplama,çıkarma,çarpma ve bölme** gibi işlemlerinin yapıldığı hesap makinesi uygulamasıdır. **Tüm işlemi** silme ve **birer birer** silme özelliği mevcuttur. 
-## [Çoklu Metin Değiştirme Uygulaması](04.html)
+## [Çoklu Metin Değiştirme Uygulaması](04-coklu-metin-uygulamasi.html)
 Bu örnekte, inputboxa yazdığımız metni, h1,h2,h3,h4,h5,h6 etiketlerinde **anlık olarak değiştiğini** gördüğümüz bir uygulamadır.
-## [Harf Uzunluğu Kadar Yazdırma Uygulaması](05.html)
+## [Harf Uzunluğu Kadar Yazdırma Uygulaması](05-harf-uzunlugu-uygulamasi.html)
 Bu örnekte, inputboxtan aldığımız metni, inputboxa yazdığımız **harfin uzunluğu kadar** aynı harfi alt alta yazdıran uygulamadır.
-## [Soru Cevap Uygulaması](06.html)
+## [Soru Cevap Uygulaması](06-soru-cevap-uygulamasi.html)
 Bu örnekte, ekranda **sorular ve cevap yazan butonlar** bulunmaktadır.Cevap butonuna **tıklamadan cevaplar gözükmemektedir**. Cevap butonuna **tıklayınca cevabın gözüktüğü** uygulamadır.
-## [Fetch İle Veri Çekme Uygulaması](07.html)
+## [Fetch İle Veri Çekme Uygulaması](07-fetch-uygulamasi.html)
 Bu örnekte, [örnek json verisi](https://dummyjson.com/) ile **fetch** fonksiyonu kullanarak **verilerin çeklip listelendiği** bir uygulamadır.
 
 
