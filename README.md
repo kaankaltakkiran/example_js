@@ -119,7 +119,7 @@ fetch('https://example.com')
   });       
 ```
 #### Map fonksiyonu ne işe yarar ve nasıl kullanılır?
-`map()`, fonksiyounu çoklu verileri **döngüye sokar** ve bir **diziye çevirir**. Aşağıda örnek bulunmaktadır.
+`map()`, fonksiyounu çoklu verileri **döngüye sokar** ve bir **diziye çevirir**. Bu veriler yeni bir **diziye** eklenir Aşağıda örnek bulunmaktadır.
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
 // Her bir sayının karesini hesaplayan bir map fonksiyonu
