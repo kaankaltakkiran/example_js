@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<script>
+  // prompt ile kullanıcıdan veri almak
+let age = prompt('Kaç yaşındasın?', 100);
+
+alert(`Sen ${age} yaşındasın!`); // Sen 100 yaşındasın!
+
+let patron = confirm("Patron musun?");
+
+alert( patron ); // eğer OK'e basıldıysa `true` döner
+
+let userNamee=prompt("Adınızı giriniz");
+alert(userNamee);
+
+let girisIzni = (yas > 18) ? true : false;
+
+let firma = prompt('JavaScript hangi firma tarafından yaratılmıştır?', '');
+
+(firma == 'Netscape') ?
+   alert('Doğru!') : alert('Yanlış.');
+
+   let value = prompt('JavaScript\'in resmi ismi nedir?', '');
+
+if (value == 'ECMAScript') {
+  alert('Doğru!');
+} else {
+  alert("ECMAScript olduğunu bilmiyormusun?");
+}
+alert( true || true );   // true
+alert( false || true );  // true
+alert( true || false );  // true
+alert( false || false ); // false
+
+let userName = prompt("Who's there?", '');
+
+if (userName == 'Admin') {
+
+  let pass = prompt('Password?', '');
+
+  if (pass == 'TheMaster') {
+    alert( 'Welcome!' );
+  } else if (pass == '' || pass == null) {
+    alert( 'Canceled.' );
+  } else {
+    alert( 'Wrong password' );
+  }
+
+} else if (userName == '' || userName == null) {
+  alert( 'Canceled' );
+} else {
+  alert( "I don't know you" );
+}
+
+</script>
