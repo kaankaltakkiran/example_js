@@ -13,6 +13,8 @@ Bu örnekte, inputboxa yazdığımız metni, h1,h2,h3,h4,h5,h6 etiketlerinde **a
 Bu örnekte, inputboxtan aldığımız metni, inputboxa yazdığımız **harfin uzunluğu kadar** aynı harfi alt alta yazdıran uygulamadır.
 ## [Soru Cevap Uygulaması](06.html)
 Bu örnekte, ekranda **sorular ve cevap yazan butonlar** bulunmaktadır.Cevap butonuna **tıklamadan cevaplar gözükmemektedir**. Cevap butonuna **tıklayınca cevabın gözüktüğü** uygulamadır.
+## [Fetch İle Veri Çekme Uygulaması](07.html)
+Bu örnekte, [örnek json verisi](https://dummyjson.com/) ile **fetch** fonksiyonu kullanarak **verilerin çeklip listelendiği** bir uygulamadır.
 
 
 ### Uygulama yaparken öğrendim bilgiler
